@@ -141,7 +141,10 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]  # novo se a pasta static 
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
-
+STATICFILES_FINDERS = [
+'django.contrib.staticfiles.finders.FileSystemFinder',     # finds files stored in the STATICFILES_DIRS setting.
+'django.contrib.staticfiles.finders.AppDirectoriesFinder', # finds files stored in the 'static' subdirectory of each app.
+]
 
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
