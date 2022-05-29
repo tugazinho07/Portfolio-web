@@ -3,7 +3,7 @@ from email.policy import default
 
 class New(models.Model):
     titulo = models.CharField(max_length=50)
-    imagem = models.ImageField(upload_to="static/portfolio/imagens", blank=True)
+    imagem = models.ImageField(upload_to="media/", blank=True)
     autor = models.CharField(max_length=40)
     data = models.DateTimeField(auto_now_add=True)
     descricao = models.CharField(max_length=500)
@@ -25,7 +25,7 @@ class Tecnologia(models.Model):
     acronimo = models.CharField(max_length=10, blank=True)
     ano = models.IntegerField()
     criador = models.CharField(max_length=40)
-    logotipo = models.ImageField(upload_to="static/portfolio/imagens")
+    logotipo = models.ImageField(upload_to="media/")
     link = models.CharField(max_length=500)
     descricao = models.TextField(max_length=1000)
 
@@ -47,8 +47,8 @@ class Education(models.Model):
     topicos = models.CharField(max_length=500, default='1')
     local = models.CharField(max_length=50)
     periodo = models.CharField(max_length=50)
-    imagem = models.ImageField(upload_to="static/portfolio/imagens", default='1')
-    logotipo = models.ImageField(upload_to="static/portfolio/imagens")
+    imagem = models.ImageField(upload_to="media/", default='1')
+    logotipo = models.ImageField(upload_to="media/")
 
     def __str__(self):
           return self.formacao[:50]
@@ -57,7 +57,7 @@ class Education(models.Model):
 class Project(models.Model):
     titulo = models.CharField(max_length = 30)
     descricao = models.CharField(max_length = 500)
-    imagem = models.ImageField(upload_to = "static/portfolio/imagens")
+    imagem = models.ImageField(upload_to = "media/")
     anoRealizado = models.IntegerField()
     participantes = models.CharField(max_length = 100)
     chair = models.CharField(max_length = 40)
@@ -98,7 +98,7 @@ class Achivement(models.Model):
 class Noticia(models.Model):
     titulo = models.CharField(max_length=80)
     texto = models.TextField(max_length=1000)
-    imagem = models.ImageField(upload_to="static/portfolio/imagens")
+    imagem = models.ImageField(upload_to="media/")
     link = models.CharField(max_length=1000)
     
     def __str__(self):
