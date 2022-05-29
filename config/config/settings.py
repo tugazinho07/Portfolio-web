@@ -130,7 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/portfolio/static/imagens/'
-MEDIA_URL = '/portfolio/static/'
+MEDIA_URL = '/portfolio/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio/static/portfolio/imagens/')
 
 # Default primary key field type
