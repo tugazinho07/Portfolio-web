@@ -91,7 +91,7 @@
 /* Quizz */      
 
 .web_quizz{
-    background-image: url("../images/quizz_background.jpeg");
+    /*background-image: url("../images/quizz_background.jpeg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center ;
