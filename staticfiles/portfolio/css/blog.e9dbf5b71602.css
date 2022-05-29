@@ -1,0 +1,48 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; height: auto;
+    background-image: url("../imagens/back2.7945a6cdf94c.png");
+  }
+  
+  .container button.edit-btn{
+    position: absolute;
+    
+    right: 10px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+  
+  .container button.edit-btn a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .container div{
+    position: relative;
+    text-align: center;
+    width: 25%;   height: auto;
+    padding: 25px;  margin: 10px;
+    font-size: 15.5px;
+    background-color: white;
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }
+  
+  .new-btn{
+    margin: 20px auto;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    font-weight: bolder;
+  }
+  
+  .new-btn a{
+    text-decoration: none;
+    color: white;
+  }

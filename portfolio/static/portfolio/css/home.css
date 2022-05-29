@@ -1,0 +1,24 @@
+*{
+    margin: 0%;
+}
+
+.imagem_parallax_1{
+  background-image: url("../imagens/entrada.jpg") ;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 90vh;
+}
+
+.imagem_parallax_2{
+  background-image: url("../imagens/capa.jpeg") ;
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  height: 90vh;
+}
+
+h3{
+  font-size: 3rem;
+}
+  

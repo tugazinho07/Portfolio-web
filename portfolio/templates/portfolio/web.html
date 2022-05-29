@@ -1,0 +1,82 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/css/web.css' %}">
+{% endblock %}
+
+{% block main %}
+    <div class="webs">
+        <h2 class="titulo_seccao">Tecnologias</h2>
+        <div class="web_tec">
+            {% for tec in tecs %}
+                <div>
+                    <h3>{{tec.acronimo}} : {{tec.nome}}</h3>
+                    <a href="{{tec.link}}"><img class = "web_logos" src="../../{{tec.logotipo}}" width="100"></a>
+                    <br><br>
+                    <p>{{tec.descricao}}</p>
+                    <br>
+                    <p><b>Criador: </b>{{tec.criador}}</p>
+                    <p><b>Ano de criação: </b>{{tec.ano}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="titulo_seccao">Notícias</h2>
+        <div class="web_noticia">
+            {% for noticia in noticias %}
+                <div>
+                    <h3>{{noticia.titulo}}</h3>
+                    <br>
+                    <button><a href="{{noticia.link}}"><img src="../../{{noticia.imagem}}" width="300"></a></button>
+                    <br><br>
+                    <p>{{noticia.texto}}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="titulo_seccao">Laboratórios</h2>
+        <div class="web_lab">
+            {% for lab in labs %}
+                <div>
+                    <h3>{{lab.titulo}}</h3>
+                    <br>
+                    <p>{{lab.descricao}}</p>
+                    <br>
+                    <button><a href="{{lab.link}}">{{lab.link}}</a></button>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h2 class="titulo_seccao">Sobre este website</h2>
+        <div class="web_sobreeste">
+            {% load static %} 
+            <center><img src="{% static 'portfolio/imagens/drawio.png' %}" width="1000"></center>
+        </div>
+
+    </div>
+        <h2 class="titulo_seccao">Quizz</h2>
+        <form method="POST" action="quizz">
+            {% csrf_token %}
+            <fieldset title="info">
+                <Legend>Identificação</Legend>
+                    <label><b>Nome:</b><input type="text" name="nome" id="nome" multiple required placeholder="Escreva aqui" size="25"></label><br>
+                    <label><b>Apelido:</b><input type="text" name="apelido" id="apelido" required placeholder="Escreva aqui"></label><br>
+            </fieldset><br>
+            <fieldset title="perguntas">
+                <label>Qual é a framework usada no pyton neste portfolio?</label>
+                <input type="text" name = "Django" id = "Django" size="20"><br><br>
+
+                <label>Como se chama a pagina que esta neste momento portfolio?</label>
+                <input type="text" name = "web" id = "web" size="20"><br><br>
+
+                <label>Qual o numero é o meu numero de telefone profissional?</label>
+                <input type="text" name = "917229966" id = "917229966" size="20"><br><br>
+
+                <label>Que jogo foi criado em Fundamentos de Programaçao?</label>
+                <input type="text" name = "xadrez" id = "xadrez" size="20"><br><br>
+                <button class="new-btn"><input type="image" alt="Submit" width="48" height="48"></button>
+            </fieldset>
+        </form>
+        {% load static %} 
+        <img src="{% static 'portfolio/imagens/grafico.png' %}">
+{% endblock %}

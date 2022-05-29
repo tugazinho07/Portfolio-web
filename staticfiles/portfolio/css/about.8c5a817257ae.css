@@ -1,0 +1,108 @@
+/* Licênciatura */
+
+body{
+  background-color: rgba(99, 129, 54, 0.392);
+}
+
+.errorlist{
+    display:none
+  }
+  
+  .licenciatura h1{
+    background-color: white;
+  }
+  
+  .licenciatura h3{
+  text-align: center;
+  font-size: 18px;
+  }
+  
+  .licenciatura{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .licenciatura div{
+    width: 35%;   height: auto;
+    padding: 25px;  margin: 10px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }
+  .titulo_seccao{
+    padding: 20px 10px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    background: rgb(46,87,22);
+    background: linear-gradient(90deg, rgba(46,87,22,1) 2%, rgba(74,196,45,1) 44%, rgba(0,255,141,1) 86%);
+  }  
+  .titulo{
+    color: black;
+  }
+  /* Formação */
+  
+  .formacao{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .formacao > div{
+    width: 35%;   height: auto;
+    padding: 25px;  margin: 10px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }
+  
+  .formacao .logo{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: auto !important;
+    border-radius: 0% !important;
+  }
+  
+  .imagem_formacao{
+    position: relative;
+  }
+  
+  /* Competências */
+  
+  .competencias{
+    float: center;
+    width: 400px;   height: auto;
+    padding: 25px;  margin: 10px;
+    background-color: white;  
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }
+  
+  /* Línguas */
+  
+  .linguas{
+    float: center;
+    width: 400px;   height: auto;
+    padding: 25px;  margin: 10px;
+    background-color: white;  
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }
+  
+  /* Hobbies */
+  
+  .desportos{
+    float: center;
+    width: 400px;   height: auto;
+    padding: 25px;  margin: 10px;
+    background-color: white;  
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+  }

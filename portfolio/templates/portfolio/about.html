@@ -1,0 +1,70 @@
+{% extends 'portfolio/layout.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/css/about.css' %}">
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="titulo_seccao">Educação</h1>
+        <div class="formacao">
+            {% for education in educations %}
+                        <div>
+                            <div class="imagem_formacao">
+                                <img src="../../{{education.imagem}}" width="300"></a>         
+                                <img src="../../{{education.logotipo}}" class="logo" ></a>
+                            </div>
+                            <h3>{{education.formacao}}</h3>
+                            <h4>{{education.curso}} | {{education.periodo}}</h4>
+                            <p><b>Local: </b>{{education.local}}</p>
+                            <br>
+                            <p>{{education.topicos}}</p>
+                        </div>
+            {% endfor %}
+        </div>
+
+    <h1 class="titulo_seccao">Unidades Curriculares</h1>
+    <div class="licenciatura">
+            {% for cadeira in cadeiras %}
+                    <div>
+                        <h3><u><a href="{{cadeira.link_cadeira}}" class="titulo">{{cadeira.nome}}</a></u></h3>
+                        <p><b>ECTS: </b>{{cadeira.ects}}</p>
+                        <p><b>Ano: </b>{{cadeira.ano}}</p>
+                        <p><b>Semestre: </b>{{cadeira.semestre}}</p>
+                        <p><b>Ano Letivo: </b> {{cadeira.ano_letivo}}</p>
+                        <p><b>Tópicos abordados: </b>{{cadeira.topicos_abordados}}</p>
+                        <p><b>Linguagens: </b> {% for language in cadeira.linguagens.all %} {{language.nome}};{% endfor %}</p>
+                        <p><b>Ranking (0-5): </b>{{cadeira.ranking}}</p>
+                        <p><b>Docente Teórica: </b><a href="{{cadeira.docente_teorica.linklusofona}}" class="titulo">{{cadeira.docente_teorica.nome}}</a></p>
+                        <p><b>Docente(s) Práticas: </b> {% for docente_pratica in cadeira.docentes_praticas.all %}<a href="{{docentes_praticas.linklusofona}}" class="titulo"> {{docente_pratica.nome}}</a> / {% endfor %}</p>
+                        <b>Projetos: </b>
+                    {% for projeto in chair.projetos.all %}
+                        <a href="{% url 'portfolio:projects' %}" class="titulo">{{projeto.titulo}}</a>; 
+                    {% endfor %}
+                    </div>
+            {% endfor %}
+    </div>
+
+    <h1 class="titulo_seccao">Competências</h1>
+        <div class="competencias">
+            <p>O curso de licenciatura em Engenharia Informática da Universidade Lusófona forma licenciados capazes de assumir posições de destaque em projetos de engenharia informática ou equipas de desenvolvimento e consultadoria, na área da engenharia dos sistemas de informação, assumindo pela sua formação e atitude papéis relevantes na geração de inovação e riqueza. Nesse sentido, os estudantes obtêm as competências adequadas à conceção, realização e manutenção de sistemas informáticos, programação de aplicações e de sistemas, desenho arquiteturas de computação e comunicações, gestão de sistemas de informação e de conhecimento, assim como à compreensão e resolução dos problemas associados.</p>
+        </div>
+
+    <h1 class="titulo_seccao">Línguas</h1>
+        <div class="linguas"> <p>Inglês</p> 
+        <img src="{% static 'portfolio/imagens/queen.png' %}" width="200">   
+        </div>
+        <div class="linguas"> <p>Português</p> 
+        <img src="{% static 'portfolio/imagens/velha.jpg' %}" width="200">
+        </div>
+    
+    <h1 class="titulo_seccao">Hobbies</h1>
+        <div class="desportos"> <p>Gaming</p> 
+        <img src="{% static 'portfolio/imagens/gaming.png' %}" width="200">
+        </div>
+        <div class="desportos"> <p>Football</p>
+            <img src="{% static 'portfolio/imagens/benfas.png' %}" width="200">
+         </div>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,98 @@
+/* Tecnologias */
+
+.titulo_seccao{
+    padding: 20px 10px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    background: rgb(46,87,22);
+    background: linear-gradient(90deg, rgba(46,87,22,1) 2%, rgba(74,196,45,1) 44%, rgba(0,255,141,1) 86%);
+  }
+  
+  .webs .web_tec{
+    background-image: url("../imagens/back3.png");
+  }
+  
+  .web_tec{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   width: 100%;
+  }
+                                                                       
+  .web_tec div{
+   width: 25%;   height: auto;
+   padding: 25px;  margin: 10px;
+   font-size: 15.5px;
+   background-color: white;
+   border-radius: 10px; /* arredonda os cantos */
+   box-shadow: 5px 5px 15px grey;
+  }
+  
+  .web_tec .web_logos{
+  height: 90px;
+  width: auto;
+  margin-left: 65%;
+  margin-top: 5%;
+  }
+  
+  /* Notícia */
+  
+  .webs .web_noticia{
+  background-image: url("../imagens/back4.png");
+  }
+  
+  .web_noticia button, .web_noticia button img{
+    border-radius: 10px;
+  }
+  
+  .web_noticia{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+   }
+                                                                        
+   .web_noticia div{
+    text-align: center;
+    min-width: 35%;   min-height: auto;
+    padding: 25px;  margin: 10px;
+    font-size: 18px;
+    background-color: white;
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+   } 
+  
+  /* Laboratórios */      
+  
+  .webs .web_lab{
+    background-image: url("../imagens/back5.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+  }
+  
+  .web_lab{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+   }
+                                                                        
+   .web_lab div{
+    width: 25%;   height: 250px;
+    padding: 25px;  margin: 10px;
+    font-size: 15.5px;
+    background-color: white;
+    border-radius: 10px; /* arredonda os cantos */
+    box-shadow: 5px 5px 15px grey;
+   }
+
+/* Quizz */      
+
+.web_quizz{
+    background-image: url("../images/quizz_background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+  }

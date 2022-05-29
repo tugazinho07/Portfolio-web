@@ -1,0 +1,34 @@
+.projects{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 30px 100px;
+    text-align: center;
+    font-size: 19px;
+    background-image: url("../imagens/back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center ;
+}
+
+.projects div img{
+    width: 200px;
+    height: 150px;
+}
+
+.projects div{
+    float: left;
+    width: 400px; height: 360px;
+    padding: 25px; margin: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px gray;
+}
+
+
+
+.after-box{
+    clear: left;
+    background-color: skyblue;
+
+}

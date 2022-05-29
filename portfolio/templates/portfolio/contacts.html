@@ -1,0 +1,54 @@
+{% extends 'portfolio/layout.html' %}
+
+{% load static %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'portfolio/css/contacts.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block main %}
+<body>  
+
+
+    <div class="images">
+        <img src="/static/portfolio/imagens/contact.png">
+    </div>
+
+    <div>
+        <h2>Contacts and Social Media</h2>
+    </div>
+
+    <div class="text">Phone</div>
+    <p>
+        917223344
+    </p>
+    <p>
+        917229966
+    </p>
+
+   <div class="text">Email</div>
+
+    <p>
+        goncalosoares@xxhub.com
+    </p>
+
+    <div class="text">Address</div>
+
+    <p>
+        Estrada da vida Nº4<br>
+        Margem Sul
+    </p>
+
+    <br>
+    <br>
+    <br>
+    <center> <a href="https://www.facebook.com/profile.php?id=100044384201042" class="fa fa-facebook"></a>   <a class="fa fa-linkedin" href="https://www.linkedin.com/in/gon%C3%A7alo-soares-3268b720b/" aria-hidden="true"></a>  <a href="https://github.com/tugazinho07" class="fa fa-github-square" aria-hidden="true"></a></center>
+    
+
+</body>
+
+
+   
+
+{% endblock %}
