@@ -11,8 +11,8 @@
             {% for education in educations %}
                         <div>
                             <div class="imagem_formacao">
-                                <img src="../../{{education.imagem}}" width="300"></a>         
-                                <img src="../../{{education.logotipo}}" class="logo" ></a>
+                                <img src="{{education.imagem.url}}" width="300"></a>         
+                                <img src="{{education.logotipo.url}}" class="logo" ></a>
                             </div>
                             <h3>{{education.formacao}}</h3>
                             <h4>{{education.curso}} | {{education.periodo}}</h4>

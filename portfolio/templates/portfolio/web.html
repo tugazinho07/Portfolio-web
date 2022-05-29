@@ -11,7 +11,7 @@
             {% for tec in tecs %}
                 <div>
                     <h3>{{tec.acronimo}} : {{tec.nome}}</h3>
-                    <a href="{{tec.link}}"><img class = "web_logos" src="../../{{tec.logotipo}}" width="100"></a>
+                    <a href="{{tec.link}}"><img class = "web_logos" src="{{tec.logotipo.url}}" width="100"></a>
                     <br><br>
                     <p>{{tec.descricao}}</p>
                     <br>
@@ -27,7 +27,7 @@
                 <div>
                     <h3>{{noticia.titulo}}</h3>
                     <br>
-                    <button><a href="{{noticia.link}}"><img src="../../{{noticia.imagem}}" width="300"></a></button>
+                    <button><a href="{{noticia.link}}"><img src="{{noticia.imagem.url}}" width="300"></a></button>
                     <br><br>
                     <p>{{noticia.texto}}</p>
                 </div>
