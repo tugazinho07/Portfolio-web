@@ -7,7 +7,7 @@ name = "pypi"
 django = "*"
 django-cloudinary-storage = "*"
 pillow = "*"
-environs = {version = "==8.0.0", extras = ["django"]}
+environs = {extras = ["django"], version = "*"}
 psycopg2-binary = "*"
 whitenoise = "==5.1.0"
 gunicorn = "==19.9.0"
