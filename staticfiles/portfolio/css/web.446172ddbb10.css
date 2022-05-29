@@ -10,7 +10,7 @@
   }
   
   .webs .web_tec{
-    background-image: url("../imagens/back3.png");
+    background-image: url("../imagens/back3.c81257e7a392.png");
   }
   
   .web_tec{
@@ -39,7 +39,7 @@
   /* Notícia */
   
   .webs .web_noticia{
-  background-image: url("../imagens/back4.png");
+  background-image: url("../imagens/back4.26183bb5a234.png");
   }
   
   .web_noticia button, .web_noticia button img{
@@ -66,7 +66,7 @@
   /* Laboratórios */      
   
   .webs .web_lab{
-    background-image: url("../imagens/back5.png");
+    background-image: url("../imagens/back5.cb3c444062b7.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center ;
