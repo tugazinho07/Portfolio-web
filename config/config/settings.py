@@ -124,14 +124,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-STATIC_URL = '/portfolio/static/images/'
+STATIC_URL = '/portfolio/static/imagens/'
 
 STATICFILES_DIRS = [str(BASE_DIR.joinpath('portfolio/static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
 MEDIA_URL ='/portfolio/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio/static/portfolio/images/')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'portfolio/static/portfolio/imagens/')
 
 STATICFILES_FINDERS = [
 'django.contrib.staticfiles.finders.FileSystemFinder',     # finds files stored in the STATICFILES_DIRS setting.
