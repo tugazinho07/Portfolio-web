@@ -5,6 +5,52 @@
 {% endblock %}
 
 {% block main %}
+<script>
+function get_weather(){
+
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '37c02cdfd6mshdf3008d2ab53768p188854jsna994e5734add',
+            'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://weatherapi-com.p.rapidapi.com/current.json?q=Lisbon', options)
+        .then(response => response.json())
+        .then
+        (data =>
+            {
+            const weather = data;
+            document.getElementById('weather').innerHTML = String(weather.location.name)+ ": " + String(weather.current.condition.text);
+            document.getElementById('temperature').innerHTML = "Temperature: " + String(weather.current.temp_c) + "ºC";
+            document.getElementById('wind').innerHTML = "Wind: " + String(weather.current.wind_kph) + " Kmh";
+            document.getElementById('humidity').innerHTML = "Humidity Level: " + String(weather.current.humidity);
+            }
+        );
+    }
+
+
+function get_wiki(){
+const axios = require("axios");
+
+const options = {
+    method: 'GET',
+    url: 'https://randomize-wiki-url.p.rapidapi.com/randomWikiURL/fullDetails',
+    headers: {
+        'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
+        'X-RapidAPI-Host': 'randomize-wiki-url.p.rapidapi.com'
+      }
+};
+    
+    axios.request(options).then(function (response) {
+        console.log(response.data);
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
+</script>
+
     <div class="webs">
         <h2 class="titulo_seccao">Tecnologias</h2>
         <div class="web_tec">
@@ -53,7 +99,33 @@
             <center><img src="{% static 'portfolio/imagens/drawio.png' %}" width="1000"></center>
         </div>
 
+        <h2 class="titulo_seccao">Api's</h2>
+        <div class="api">
+            <h1>Playing with APIS</h1>
+        <div class="weather_api">
+            <h1>Weather Api Set to Lisbon current Weather:</h1>
+            <div class="weather_api_fields">
+                <p id="weather"></p>
+                <p id="temperature"></p>
+                <p id="wind"></p>
+                <p id="humidity"></p>
+                <button onclick="get_weather()">Try It</button>
+            </div>
+        </div>
+
+        <div class="wiki_api">
+            <h1>Random URL API:</h1>
+            <div class="api_fields">
+                <p id="setup"></p>
+                <p id="punchline"></p>
+                <button onclick="get_wiki()">Try It</button>
+            </div>
+        </div>
+        </div>
+
     </div>
+
+    
         <h2 class="titulo_seccao">Quizz</h2>
         <form method="POST" action="quizz">
             {% csrf_token %}

@@ -120,7 +120,8 @@ class TFC(models.Model):
     linkRelatorio = models.CharField(max_length=1000)
     ano = models.IntegerField()
     autor = models.CharField(max_length=70)
-    orientador = models.CharField(max_length=70)
+    orientador = models.ManyToManyField(Person)
+    imagem = models.ImageField(upload_to='media/', null=True, blank=True)
 
     def __str__(self):
           return self.titulo[:50]
