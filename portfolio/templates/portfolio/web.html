@@ -28,27 +28,32 @@ function get_weather(){
             document.getElementById('humidity').innerHTML = "Humidity Level: " + String(weather.current.humidity);
             }
         );
-    }
+}
 
 
-function get_wiki(){
-const axios = require("axios");
+function get_joke(){
 
 const options = {
-    method: 'GET',
-    url: 'https://randomize-wiki-url.p.rapidapi.com/randomWikiURL/fullDetails',
-    headers: {
-        'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY',
-        'X-RapidAPI-Host': 'randomize-wiki-url.p.rapidapi.com'
-      }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '37c02cdfd6mshdf3008d2ab53768p188854jsna994e5734add',
+		'X-RapidAPI-Host': 'dad-jokes.p.rapidapi.com'
+	}
 };
-    
-    axios.request(options).then(function (response) {
-        console.log(response.data);
-    }).catch(function (error) {
-        console.error(error);
-    });
-}
+
+fetch('https://dad-jokes.p.rapidapi.com/random/joke', options)
+	.then(response => response.json())
+	.then
+	(data =>
+	    {
+	     const joke = data;
+       console.log(data.body[0].setup)
+	     document.getElementById('base').innerHTML = String(data.body[0].setup);
+        document.getElementById('punchline').innerHTML = String(data.body[0].punchline);
+	    }
+
+	);
+    }
 </script>
 
     <div class="webs">
@@ -113,12 +118,12 @@ const options = {
             </div>
         </div>
 
-        <div class="wiki_api">
-            <h1>Random URL API:</h1>
+        <div class="joke_api">
+            <h1>Random Joke:</h1>
             <div class="api_fields">
-                <p id="setup"></p>
+                <p id="base"></p>
                 <p id="punchline"></p>
-                <button onclick="get_wiki()">Try It</button>
+                <button onclick="get_joke()">Try It</button>
             </div>
         </div>
         </div>
