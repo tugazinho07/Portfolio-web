@@ -34,7 +34,7 @@
                         <p><b>Ano Letivo: </b> {{cadeira.ano_letivo}}</p>
                         <p><b>Tópicos abordados: </b>{{cadeira.topicos_abordados}}</p>
                         <p><b>Linguagens: </b> {% for language in cadeira.linguagens.all %} {{language.nome}};{% endfor %}</p>
-                        <p><b>Ranking (0-5): </b>{{cadeira.ranking}}</p>
+                        <p><b>Ranking (0-5): </b>{{cadeira.raking}}</p>
                         <p><b>Docente Teórica: </b><a href="{{cadeira.docente_teorica.linklusofona}}" class="titulo">{{cadeira.docente_teorica.nome}}</a></p>
                         <p><b>Docente(s) Práticas: </b> {% for docente_pratica in cadeira.docentes_praticas.all %}<a href="{{docentes_praticas.linklusofona}}" class="titulo"> {{docente_pratica.nome}}</a> / {% endfor %}</p>
                         <b>Projetos: </b>
