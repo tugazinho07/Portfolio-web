@@ -121,7 +121,7 @@ class TFC(models.Model):
     autor = models.CharField(max_length=70)
     ano = models.IntegerField()
     orientador = models.ManyToManyField(Person)
-    imagem = models.ImageField(upload_to='media/', null=True, blank=True)
+    imagem2 = models.ImageField(upload_to='media/', null=True, blank=True)
 
     def __str__(self):
           return self.titulo[:50]
