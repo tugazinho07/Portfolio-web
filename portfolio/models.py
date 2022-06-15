@@ -118,8 +118,8 @@ class TFC(models.Model):
     linkGitHub = models.CharField(max_length=1000)
     linkYoutube = models.CharField(max_length=1000)
     linkRelatorio = models.CharField(max_length=1000)
-    ano = models.IntegerField()
     autor = models.CharField(max_length=70)
+    ano = models.IntegerField()
     orientador = models.ManyToManyField(Person)
     imagem = models.ImageField(upload_to='media/', null=True, blank=True)
 
