@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing:border-box;
     font-family: sans-serif;
+    text-decoration: none;
   }
   
 header {
@@ -47,6 +48,5 @@ header div {
     font-size: 20px;
     padding: 2%;
   }
-
 
 

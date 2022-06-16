@@ -14,3 +14,4 @@ admin.site.register(TFC)
 admin.site.register(Achivement)
 admin.site.register(Tecnologia)
 
+

@@ -13,5 +13,7 @@ urlpatterns = [
     path('blog_edit/<int:portfolio_id>', views.edit_tarefa_view, name='blog_edit'),
     path('delete/<int:portfolio_id>', views.delete_tarefa_view, name='delete'),
     path('contacts', views.contacts_view, name='contacts'),
-    path('quizz', views.quizz, name='quizz')
+    path('quizz', views.quizz, name='quizz'),
+    path('login', views.login_view, name='login'),
+    path('logout', views.logout_view, name='logout')
 ]

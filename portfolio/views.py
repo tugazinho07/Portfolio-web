@@ -116,3 +116,25 @@ def quizz(request):
     }
     desenha_grafico_resultados()
     return render(request,'portfolio/web.html', context)
+
+def login_view(request):
+    if request.method == "POST":
+        nome_login = request.POST.get('username')
+        password_login = request.POST.get('password')
+        utilizador = authenticate(request, username=nome_login, password=password_login)
+
+        if utilizador is not None:
+            login(request, utilizador)
+            context = {'post': New.objects.all(),}
+            return render(request, 'portfolio/blog.html', context)
+        else:
+            return render(
+                request, 'portfolio/login.html',
+                {'message': "Credenciais Invalidas"}
+            )
+
+    return render(request, 'portfolio/login.html')
+
+def logout_view(request):
+    logout(request)
+    return render(request, 'portfolio/home.html')
