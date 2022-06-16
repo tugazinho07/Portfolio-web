@@ -32,3 +32,12 @@
     background-color: skyblue;
 
 }
+
+.titulo{
+    padding: 20px 10px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+    background: rgb(46,87,22);
+    background: linear-gradient(90deg, rgba(46,87,22,1) 2%, rgba(74,196,45,1) 44%, rgba(0,255,141,1) 86%);
+  }  

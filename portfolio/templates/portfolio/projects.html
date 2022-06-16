@@ -23,8 +23,8 @@
         {% endfor %}
     </div>
 
-    <h1 class="titulo_seccao">Trabalhos Final de Curso</h1>
-    <div class="tfc">
+    <h1 class="titulo">Trabalhos Final de Curso</h1>
+    <div class="projects">
         {% for tfc in tfcs %}
             <div>
                 <h3>{{tfc.titulo}}</h3>
@@ -34,7 +34,7 @@
                     <p><b>Orientador: </b>{{orientador.nome}}</p>
                 {% endfor %}
                 <br>
-                <button><a href="{{tfc.linkGitHub}}"><img src="{{tfc.imagem.url}}" width="200"></a></button>
+                <button><a href="{{tfc.linkGitHub}}"><img src="{{tfc.imagem2.url}}" width="200"></a></button>
                 <br><br>
                 <a href="{{tfc.linkYoutube}}"> LinkYoutube</a>
                 <br>
