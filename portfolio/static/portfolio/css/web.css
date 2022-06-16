@@ -80,7 +80,7 @@
    }
                                                                         
    .web_lab div{
-    width: 25%;   height: 250px;
+    width: 25%;   height: auto;
     padding: 25px;  margin: 10px;
     font-size: 15.5px;
     background-color: white;
