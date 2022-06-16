@@ -22,7 +22,7 @@
 
 .projects div{
     float: left;
-    width: 400px; height: 360px;
+    width: 400px; height: auto;
     padding: 25px; margin: 10px;
     background-color: white;
     border-radius: 10px;
