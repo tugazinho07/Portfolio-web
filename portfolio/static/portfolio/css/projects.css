@@ -12,8 +12,8 @@
 }
 
 .projects div img{
-    margin-top: 10%;
-    margin-bottom: 10%;
+  margin-bottom: 10%;
+  margin-top: 10%;
 }
 
 .projects div{
@@ -33,7 +33,7 @@
 
 }
 
-.titulo{
+.titulo_seccao{
     padding: 20px 10px;
     color: white;
     font-size: 35px;
